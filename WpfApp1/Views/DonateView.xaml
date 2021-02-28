@@ -1,0 +1,40 @@
+﻿<Window x:Class="WindowsExtensions.Views.DonateView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowsExtensions.Views"
+        xmlns:fw="clr-namespace:SourceChord.FluentWPF;assembly=FluentWPF"
+        xmlns:wpfcore="clr-namespace:WPFCore"
+        mc:Ignorable="d"
+        fw:AcrylicWindow.Enabled="True" 
+        FontSize="16" 
+        WindowStyle="SingleBorderWindow" AllowsTransparency="False" ResizeMode="NoResize"
+        Title="About" Height="480" Width="900" WindowStartupLocation="CenterOwner">
+    <Grid Background="#55553A00" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="320"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <TextBlock Margin="8,0,0,0" TextWrapping="Wrap" Text="I have several projects I am going to release for free and open source like a Games Encyclopedia, Super Image Searcher, Tech learn apps, Freecad models and more." FontSize="20" Foreground="WhiteSmoke"/>
+            <TextBlock Margin="8,8,0,0" TextWrapping="Wrap"  FontSize="20" Foreground="WhiteSmoke">
+                The main reason is because the app stores are out of control. I preffer to share software that helps than to earn money in my repo at
+                <Hyperlink NavigateUri="https://github.com/juanpaexpedite" wpfcore:WPFService.Navigate="True" >
+                    https://github.com/juanpaexpedite
+                </Hyperlink>
+            </TextBlock>
+            <TextBlock x:Name="DogeAmountInformation" Margin="8,8,0,0" TextWrapping="Wrap" Text="" FontSize="20" Foreground="WhiteSmoke"/>
+            <TextBox IsReadOnly="True" Background="Transparent" Margin="8,8,0,0" TextWrapping="Wrap" Text="D6VB4FVDQa4B6EdXZTXTNpx5LjDD2eGrFb" FontSize="20" Foreground="WhiteSmoke"/>
+        </StackPanel>
+
+        <Image Grid.Column="1" Source="/WindowsExtensions;component/Assets/doge_qr.png" Stretch="Uniform" Width="128" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+        <Button Grid.Row="1" HorizontalAlignment="Left" Click="CopyWallet_Click" Width="224" Height="64" Content="Copy Wallet Address"  Margin="12" Style="{StaticResource ButtonRevealStyle}"  FontSize="20"/>
+        <Label x:Name="LabelCopied" Visibility="Hidden" Content="Copied" Grid.Row="1" VerticalAlignment="Center" Margin="260,0,0,0" HorizontalAlignment="Left" Foreground="WhiteSmoke"/>
+        <Button Grid.Row="1"  HorizontalAlignment="Right" Click="Close_Click" Width="128" Height="64" Content="Close"  Margin="12" Style="{StaticResource ButtonRevealStyle}"  FontSize="20"/>
+    </Grid>
+</Window>
