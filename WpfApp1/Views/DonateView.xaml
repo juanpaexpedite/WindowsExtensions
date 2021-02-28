@@ -21,7 +21,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <StackPanel>
-            <TextBlock Margin="8,0,0,0" TextWrapping="Wrap" Text="I have several projects I am going to release for free and open source like a Games Encyclopedia, Super Image Searcher, Tech learn apps, Freecad models and more." FontSize="20" Foreground="WhiteSmoke"/>
+            <TextBlock Margin="8,0,0,0" TextWrapping="Wrap" Text="I have several projects I am going to release for free and open source Productivity tools, a Games Encyclopedia, Super Image Searcher, Tech learn apps, Freecad models and more." FontSize="20" Foreground="WhiteSmoke"/>
             <TextBlock Margin="8,8,0,0" TextWrapping="Wrap"  FontSize="20" Foreground="WhiteSmoke">
                 The main reason is because the app stores are out of control. I preffer to share software that helps than to earn money in my repo at
                 <Hyperlink NavigateUri="https://github.com/juanpaexpedite" wpfcore:WPFService.Navigate="True" >
